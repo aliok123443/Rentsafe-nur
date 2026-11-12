@@ -1,0 +1,84 @@
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+
+  .reveal {
+    opacity: 1 !important;
+    transform: none !important;
+  }
+}
+
+:focus-visible {
+  outline: 2px solid var(--lime);
+  outline-offset: 3px;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+html,
+body {
+  scroll-behavior: smooth;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .principles-pin {
+    height: auto;
+  }
+
+  .principles-sticky {
+    position: relative;
+    height: auto;
+    min-height: 0;
+    padding: 5rem 0;
+  }
+
+  .principles-stage {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .principles-orb {
+    width: min(34vw, 140px);
+    transform: none;
+  }
+
+  .principles-steps {
+    display: grid;
+    gap: 1rem;
+    min-height: 0;
+  }
+
+  .principles-steps .principle,
+  .principles-steps .principle.is-active {
+    position: relative;
+    inset: auto;
+    min-height: 140px;
+    padding: 1rem;
+    border: 1px solid var(--line);
+    border-radius: var(--radius-card);
+    background: var(--panel);
+    opacity: 1;
+    transform: none;
+    pointer-events: auto;
+  }
+
+  .principles-progress {
+    display: none;
+  }
+}
